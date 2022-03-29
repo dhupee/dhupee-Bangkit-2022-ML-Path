@@ -1,0 +1,1 @@
+# Delete any files with the name $input in the current directory or specified directory $dir
