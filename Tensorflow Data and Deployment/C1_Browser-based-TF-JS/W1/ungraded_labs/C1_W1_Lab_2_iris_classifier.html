@@ -15,8 +15,8 @@
             const numOfFeatures = (await trainingData.columnNames()).length - 1;
             const numOfSamples = 150;
             const convertedData =
-                  trainingData.map(({xs, ys}) => {
-                      const labels = [
+                    trainingData.map(({xs, ys}) => {
+                        const labels = [
                             ys.species == "setosa" ? 1 : 0,
                             ys.species == "virginica" ? 1 : 0,
                             ys.species == "versicolor" ? 1 : 0

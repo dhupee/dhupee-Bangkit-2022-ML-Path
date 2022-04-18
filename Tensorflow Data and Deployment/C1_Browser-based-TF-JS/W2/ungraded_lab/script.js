@@ -24,7 +24,7 @@ async function train(model, data) {
 	const metrics = ['loss', 'val_loss', 'accuracy', 'val_accuracy'];
 	const container = { name: 'Model Training', styles: { height: '640px' } };
 	const fitCallbacks = tfvis.show.fitCallbacks(container, metrics);
-  
+
 	const BATCH_SIZE = 512;
 	const TRAIN_DATA_SIZE = 5500;
 	const TEST_DATA_SIZE = 1000;
@@ -81,9 +81,9 @@ function save() {
 	var raw = tf.browser.fromPixels(rawImage,1);
 	var resized = tf.image.resizeBilinear(raw, [28,28]);
 	var tensor = resized.expandDims(0);
-    var prediction = model.predict(tensor);
-    var pIndex = tf.argMax(prediction, 1).dataSync();
-    
+	var prediction = model.predict(tensor);
+	var pIndex = tf.argMax(prediction, 1).dataSync();
+
 	alert(pIndex);
 }
     
